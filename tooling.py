@@ -13,7 +13,7 @@ from simpletest import scrape_google
 class Groq_Agent:
     def __init__(self):
         dotenv.load_dotenv()
-        print(os.getenv("GOOGLE_CSE_API_KEY"))
+        print(os.getenv("GOOGLE_CSE_ID"))
         self.groq_api_key = os.getenv("GROQ_API_KEY")
         self.google_cse_id = os.getenv("GOOGLE_CSE_ID")
         self.google_cse_api_key = os.getenv("GOOGLE_CSE_API_KEY")
@@ -89,7 +89,7 @@ class Groq_Agent:
                 model=self.model,
                 messages=messages,
                 temperature=0.5,
-                max_tokens=2048,
+                max_tokens=8000,
                 top_p=1,
             )
             response_text = response.choices[0].message.content

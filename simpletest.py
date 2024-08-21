@@ -1,7 +1,10 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 from googleapiclient.discovery import build
+from dotenv import load_dotenv
 
+load_dotenv()
 google_cse_id = os.getenv("GOOGLE_CSE_ID")
 google_cse_api_key = os.getenv("GOOGLE_CSE_API_KEY")
 
