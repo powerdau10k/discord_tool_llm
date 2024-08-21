@@ -1,4 +1,3 @@
-from scrapetest import simpletest/simpletest
 import os
 import dotenv
 import discord
